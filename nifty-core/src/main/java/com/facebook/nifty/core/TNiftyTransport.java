@@ -151,7 +151,6 @@ public class TNiftyTransport extends TTransport
     }
 
     @Override
-    @edu.umd.cs.findbugs.annotations.SuppressWarnings("EI_EXPOSE_REP")
     public byte[] getBuffer()
     {
         return buffer;

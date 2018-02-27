@@ -18,7 +18,6 @@ package com.facebook.nifty.core;
 import com.facebook.nifty.ssl.SslPlaintextHandler;
 import com.facebook.nifty.ssl.SslServerConfiguration;
 import com.google.common.base.Preconditions;
-import edu.umd.cs.findbugs.annotations.SuppressWarnings;
 import io.airlift.log.Logger;
 import org.apache.thrift.protocol.TProtocolFactory;
 import org.jboss.netty.bootstrap.ServerBootstrap;
@@ -240,7 +239,6 @@ public class NettyServerTransport implements ExternalResourceReleasable
         }
 
         @Override
-        @SuppressWarnings("PMD.CollapsibleIfStatements")
         public void channelOpen(ChannelHandlerContext ctx, ChannelStateEvent e) throws Exception
         {
             if (maxConnections > 0 && numConnections.incrementAndGet() > maxConnections) {
@@ -252,7 +250,6 @@ public class NettyServerTransport implements ExternalResourceReleasable
         }
 
         @Override
-        @SuppressWarnings("PMD.CollapsibleIfStatements")
         public void channelClosed(ChannelHandlerContext ctx, ChannelStateEvent e) throws Exception
         {
             if (maxConnections > 0 && numConnections.decrementAndGet() < 0) {
