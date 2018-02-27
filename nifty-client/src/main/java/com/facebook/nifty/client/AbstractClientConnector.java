@@ -64,7 +64,7 @@ public abstract class AbstractClientConnector<T extends NiftyClientChannel>
 
     protected static SocketAddress toSocketAddress(HostAndPort address)
     {
-        return InetSocketAddress.createUnresolved(address.getHostText(), address.getPort());
+        return InetSocketAddress.createUnresolved(address.getHost(), address.getPort());
     }
 
     protected static TDuplexProtocolFactory defaultProtocolFactory()

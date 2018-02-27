@@ -22,7 +22,7 @@
     <parent>
         <groupId>io.airlift</groupId>
         <artifactId>airbase</artifactId>
-        <version>46</version>
+        <version>79</version>
         <relativePath />
     </parent>
 
@@ -35,7 +35,6 @@
         <module>nifty-core</module>
         <module>nifty-client</module>
         <module>nifty-examples</module>
-        <module>nifty-load-tester</module>
         <module>nifty-ssl</module>
     </modules>
 
@@ -43,9 +42,14 @@
         <air.check.skip-findbugs>true</air.check.skip-findbugs>
         <air.check.skip-pmd>true</air.check.skip-pmd>
         <air.check.skip-jacoco>true</air.check.skip-jacoco>
+        <air.check.skip-license>true</air.check.skip-license>
+        <air.check.skip-checkstyle>true</air.check.skip-checkstyle>
+        <air.check.skip-modernizer>true</air.check.skip-modernizer>
+        <air.check.skip-spotbugs>true</air.check.skip-spotbugs>
 
-        <dep.airlift.version>0.119</dep.airlift.version>
+        <dep.airlift.version>0.163</dep.airlift.version>
         <dep.jackson.version>2.4.4</dep.jackson.version>
+        <dep.guava.version>23.0</dep.guava.version>
     </properties>
 
     <url>https://facebook.github.com/nifty</url>
@@ -169,7 +173,7 @@
             <dependency>
                 <groupId>io.airlift</groupId>
                 <artifactId>units</artifactId>
-                <version>${dep.airlift.version}</version>
+                <version>1.0</version>
             </dependency>
 
             <dependency>
